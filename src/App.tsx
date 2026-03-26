@@ -112,7 +112,7 @@ function FloatingPetals() {
 }
 
 function CountdownTimer() {
-  const targetDate = new Date("June 12, 2026 10:30:00").getTime();
+  const targetDate = new Date("June 12, 2026 10:17:00").getTime();
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
 
   React.useEffect(() => {
@@ -437,10 +437,16 @@ export default function WeddingInvitation() {
             {/* Wedding Details Section */}
             <section className="cv-auto py-24 md:py-32 w-full flex flex-col items-center px-4 relative">
               <div className="section-floral-overlay absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
-                <img src={mandalaImage} className="absolute -left-20 md:-left-10 -top-10 md:top-8 w-[260px] md:w-[460px] h-auto mix-blend-multiply opacity-55 -rotate-[8deg]" alt="" />
-                <img src={mandalaImage} className="hidden md:block absolute -right-20 md:-right-10 -top-16 md:top-2 w-[250px] md:w-[430px] h-auto mix-blend-multiply opacity-50 rotate-[12deg]" alt="" />
-                <img src={mandalaImage} className="hidden md:block absolute -left-20 md:-left-6 bottom-2 md:bottom-8 w-[250px] md:w-[420px] h-auto mix-blend-multiply opacity-40 rotate-[180deg]" alt="" />
-                <img src={mandalaImage} className="absolute -right-24 md:-right-8 bottom-0 md:bottom-14 w-[270px] md:w-[470px] h-auto mix-blend-multiply opacity-45 -rotate-[170deg]" alt="" />
+                {/* Top-left: left.png on mobile, mandala on desktop */}
+                <img src="/images/left.png" className="block md:hidden absolute -left-4 -top-4 w-[200px] h-auto opacity-80 object-contain" alt="" />
+                <img src={mandalaImage} className="hidden md:block absolute -left-10 top-8 w-[460px] h-auto mix-blend-multiply opacity-55 -rotate-[8deg]" alt="" />
+                {/* Top-right: mandala on desktop only */}
+                <img src={mandalaImage} className="hidden md:block absolute -right-10 top-2 w-[430px] h-auto mix-blend-multiply opacity-50 rotate-[12deg]" alt="" />
+                {/* Bottom-left: mandala on desktop only */}
+                <img src={mandalaImage} className="hidden md:block absolute -left-6 bottom-8 w-[420px] h-auto mix-blend-multiply opacity-40 rotate-[180deg]" alt="" />
+                {/* Bottom-right: right.png on mobile, mandala on desktop */}
+                <img src="/images/right.png" className="block md:hidden absolute -right-4 bottom-0 w-[200px] h-auto opacity-80 object-contain" alt="" />
+                <img src={mandalaImage} className="hidden md:block absolute -right-8 bottom-14 w-[470px] h-auto mix-blend-multiply opacity-45 -rotate-[170deg]" alt="" />
               </div>
 
               <div className="max-w-[1000px] w-full flex flex-col items-center text-center relative z-10">
@@ -486,8 +492,8 @@ export default function WeddingInvitation() {
                     <div className="absolute inset-0 opacity-[0.02] bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] pointer-events-none" />
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
-                        <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Loving daughter of</p>
-                        <p className="text-sm md:text-base font-cinzel text-stone-600 tracking-wider">Mr. & Mrs. Bandara</p>
+                        <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved daughter of</p>
+                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. G. Gamunu Nimal Kumaratunga<br />& Mrs. T. M. Nayomi Priyangika</p>
                       </div>
                       <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Nimmi</h3>
                     </div>
@@ -520,8 +526,8 @@ export default function WeddingInvitation() {
                     <div className="absolute inset-0 opacity-[0.02] bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] pointer-events-none" />
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
-                        <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Loving son of</p>
-                        <p className="text-sm md:text-base font-cinzel text-stone-600 tracking-wider">Mr & Mrs. Pathirana</p>
+                        <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved son of</p>
+                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. M. Lalith Kumara<br />& Mrs. G. V. Champika Deepani</p>
                       </div>
                       <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Rishan</h3>
                     </div>
@@ -560,8 +566,8 @@ export default function WeddingInvitation() {
                     <div className="flex flex-col items-center flex-1">
                       <Clock className="w-6 h-6 md:w-8 md:h-8 text-theme-500 mb-4 opacity-80" />
                       <p className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-stone-400 font-bold mb-3">The Time</p>
-                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">10:00 AM</p>
-                      <p className="font-cinzel text-xs md:text-sm text-theme-600 tracking-[0.2em] mt-3 uppercase">To 04:00 PM</p>
+                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">10:30 AM</p>
+                      <p className="font-cinzel text-xs md:text-sm text-theme-600 tracking-[0.2em] mt-3 uppercase">To 04:30 PM</p>
                     </div>
                   </div>
 
@@ -570,7 +576,7 @@ export default function WeddingInvitation() {
                       <div className="absolute inset-0 bg-theme-100 blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
                       <p className="relative text-theme-800 bg-white shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] text-[9px] md:text-[11px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase px-6 lg:px-10 py-4 lg:py-5 rounded-full border border-theme-200 flex items-center justify-center gap-4 w-full md:w-auto">
                         <span className="w-1.5 h-1.5 rotate-45 bg-theme-500 shrink-0" />
-                        <span className="whitespace-nowrap">Poruwa Ceremony at 10:30 AM</span>
+                        <span className="whitespace-nowrap">Poruwa Ceremony at 10:17 AM</span>
                         <span className="w-1.5 h-1.5 rotate-45 bg-theme-500 shrink-0" />
                       </p>
                     </div>
@@ -638,7 +644,7 @@ export default function WeddingInvitation() {
                         <span className="text-theme-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
                       </div>
                       <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[5.5rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px]">
-                        Sueen Nature
+                        SUEEN Nature Hotel
                       </h2>
                     </div>
 
@@ -650,7 +656,7 @@ export default function WeddingInvitation() {
                           <MapPin className="w-4 h-4 text-theme-500" />
                         </div>
                         <p className="text-lg md:text-xl text-stone-700 font-cinzel font-medium leading-relaxed tracking-wide">
-                          Palangahawatta,<br /> Morapitiya Road, Palenda,<br /> Baduraliya, Sri Lanka.
+                          Baduraliya, Palenda,<br /> Sri Lanka.
                         </p>
                       </div>
 
@@ -865,9 +871,12 @@ export default function WeddingInvitation() {
               </section>
 
               {/* Footer */}
-              <footer className="py-12 border-t border-theme-200/30 text-center relative z-10">
+              <footer className="py-12 border-t border-theme-200/30 text-center relative z-10 space-y-3">
                 <p className="text-[8px] md:text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold">
                   © 2026 Nimmi & Rishan. <span className="hidden md:inline">|</span><br className="md:hidden block mt-2" /> All rights reserved.
+                </p>
+                <p className="text-[8px] md:text-[10px] tracking-[0.3em] text-stone-400">
+                  Contact: <a href="tel:0716613988" className="text-theme-600 font-bold hover:text-theme-800 transition-colors">Nimmi – 071 6613988</a>
                 </p>
               </footer>
             </div>
