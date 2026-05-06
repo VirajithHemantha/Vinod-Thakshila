@@ -764,12 +764,22 @@ export default function WeddingInvitation() {
               </section>
 
               {/* Footer */}
-              <footer className="py-12 border-t border-theme-200/30 text-center relative z-10 space-y-3">
-                <p className="text-[8px] md:text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold">
-                  © 2026 Nuwan & Samudra. <span className="hidden md:inline">|</span><br className="md:hidden block mt-2" /> All rights reserved.
-                </p>
-                <p className="text-[8px] md:text-[10px] tracking-[0.3em] text-stone-400">
-                  Contact: <a href="tel:0716613988" className="text-theme-600 font-bold hover:text-theme-800 transition-colors">Nuwan – 071 6613988</a>
+              <footer className="py-12 border-t border-theme-200/30 text-center relative z-10 space-y-4">
+                <div className="flex flex-col items-center space-y-2">
+                  <p className="text-[8px] md:text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold mb-2">
+                    Contact Information
+                  </p>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 space-y-3 md:space-y-0">
+                    <p className="text-[11px] md:text-[12px] tracking-[0.2em] text-stone-500 font-medium">
+                      Nuwan: <a href="tel:0765585691" className="text-theme-600 font-bold hover:text-theme-800 transition-colors ml-1">076 5585691</a>
+                    </p>
+                    <p className="text-[11px] md:text-[12px] tracking-[0.2em] text-stone-500 font-medium">
+                      Samudra: <a href="tel:0705107809" className="text-theme-600 font-bold hover:text-theme-800 transition-colors ml-1">070 5107809</a>
+                    </p>
+                  </div>
+                </div>
+                <p className="text-[8px] md:text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold pt-4">
+                  © 2026 Nuwan & Samudra. All rights reserved.
                 </p>
               </footer>
             </div>
@@ -793,7 +803,7 @@ export default function WeddingInvitation() {
           background: #fdfaf5;
         }
         ::-webkit-scrollbar-thumb {
-          background: #f3a7cd;
+          background: #DDBB61;
           border-radius: 10px;
         }
       `}} />
