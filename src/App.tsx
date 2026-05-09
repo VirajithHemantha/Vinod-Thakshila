@@ -4,7 +4,7 @@ import { Sparkles, MapPin, Calendar, Clock } from "lucide-react";
 
 /**
  * Premium Sri Lankan Wedding Invitation Theme
- * Names: Naween & Nadeesha
+ * Names: Achintha & Sanlaksha
  * Background: Cream/Sand
  * Accents: Green/Brown
  */
@@ -139,7 +139,7 @@ function FloatingPetals({ disabled = false }: { disabled?: boolean }) {
 }
 
 function CountdownTimer() {
-  const targetDate = new Date("June 3, 2026 09:00:00").getTime();
+  const targetDate = new Date("August 8, 2026 09:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
 
   React.useEffect(() => {
@@ -216,9 +216,9 @@ function WeddingEnvelope({ onOpen }: { onOpen: () => void }) {
           Save the Date
         </span>
         <h1 className="font-cinzel text-4xl md:text-5xl text-theme-800 mb-4 tracking-tight">
-          Nuwan & Samudra
+          Achintha & Sanlaksha
         </h1>
-        <p className="text-stone-500 text-sm tracking-[0.2em] font-light">JUNE 3, 2026</p>
+        <p className="text-stone-500 text-sm tracking-[0.2em] font-light">AUGUST 8, 2026</p>
       </motion.div>
 
       {/* Gatefold Envelope */}
@@ -246,7 +246,7 @@ function WeddingEnvelope({ onOpen }: { onOpen: () => void }) {
         >
           <div className="absolute inset-1.5 rounded-full border border-[#D4A338]/50" />
           <div className="text-center relative z-10">
-            <p className="font-cinzel text-[1.7rem] font-bold text-white leading-none">N&S</p>
+            <p className="font-cinzel text-[1.7rem] font-bold text-white leading-none">A&S</p>
             <div className="h-px w-12 bg-white/50 mx-auto my-1.5" />
             <p className="text-[8px] uppercase tracking-[0.35em] font-bold text-white/80">Open</p>
           </div>
@@ -345,7 +345,7 @@ export default function WeddingInvitation() {
                 transition={{ duration: 2, ease: "easeOut" }}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-cinzel text-[40vw] text-theme-900 pointer-events-none whitespace-nowrap leading-none select-none z-0 hidden md:block"
               >
-                N&S
+                A&S
               </motion.div>
 
               {/* Central Premium Arch Card */}
@@ -387,7 +387,7 @@ export default function WeddingInvitation() {
                       transition={{ delay: 1, duration: 0.8 }}
                       className="font-playball text-[3rem] sm:text-[3.5rem] md:text-[5rem] text-theme-800 leading-[1.1] drop-shadow-sm"
                     >
-                      Nuwan
+                      Achintha
                     </motion.h1>
                     <motion.div
                       initial={{ scale: 0 }}
@@ -403,7 +403,7 @@ export default function WeddingInvitation() {
                       transition={{ delay: 1.4, duration: 0.8 }}
                       className="font-playball text-[3rem] sm:text-[3.5rem] md:text-[5rem] text-theme-800 leading-[1.1] drop-shadow-sm"
                     >
-                      Samudra
+                      Sanlaksha
                     </motion.h1>
                   </div>
 
@@ -419,8 +419,8 @@ export default function WeddingInvitation() {
                       <div className="h-px w-full bg-gradient-to-l from-transparent via-theme-300 to-theme-400" />
                     </div>
                     <div className="font-cinzel space-y-2">
-                      <p className="text-lg md:text-base text-stone-700 tracking-[0.2em] md:tracking-[0.3em] font-bold">3 JUNE 2026</p>
-                      <p className="text-[11px] md:text-[9px] text-theme-600 tracking-[0.2em] uppercase font-bold">Awissawella, Sri Lanka</p>
+                      <p className="text-lg md:text-base text-stone-700 tracking-[0.2em] md:tracking-[0.3em] font-bold">8 AUGUST 2026</p>
+                      <p className="text-[11px] md:text-[9px] text-theme-600 tracking-[0.2em] uppercase font-bold">Colombo, Sri Lanka</p>
                     </div>
                   </motion.div>
                 </div>
@@ -504,9 +504,9 @@ export default function WeddingInvitation() {
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
                         <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved son of</p>
-                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. & Mrs. Senarathna</p>
+                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. & Mrs. Perera</p>
                       </div>
-                      <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Nuwan</h3>
+                      <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Achintha</h3>
                     </div>
                   </motion.div>
 
@@ -538,9 +538,9 @@ export default function WeddingInvitation() {
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
                         <p className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] font-bold text-stone-400">Beloved daughter of</p>
-                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. & Mrs. Thilakarathna</p>
+                        <p className="text-xs md:text-sm font-cinzel text-stone-600 tracking-wide leading-relaxed">Mr. & Mrs. Silva</p>
                       </div>
-                      <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Samudra</h3>
+                      <h3 className="text-5xl md:text-7xl font-playball text-theme-800 group-hover:scale-110 transition-transform duration-700 pt-6 drop-shadow-sm">Sanlaksha</h3>
                     </div>
                   </motion.div>
                 </div>
@@ -558,7 +558,7 @@ export default function WeddingInvitation() {
                     <div className="flex flex-col items-center flex-1">
                       <Calendar className="w-6 h-6 md:w-8 md:h-8 text-theme-500 mb-4 opacity-80" />
                       <p className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-stone-400 font-bold mb-3">The Date</p>
-                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">WEDNESDAY, 3 JUNE</p>
+                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">SATURDAY, 8 AUGUST</p>
                       <p className="font-cinzel text-lg md:text-xl text-theme-600 tracking-[0.3em] font-normal mt-2">2026</p>
                     </div>
 
@@ -655,7 +655,7 @@ export default function WeddingInvitation() {
                         <span className="text-theme-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
                       </div>
                       <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[5.5rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px]">
-                        Sethhawaka Regency
+                        Cinnamon Lakeside
                       </h2>
                     </div>
 
@@ -667,7 +667,7 @@ export default function WeddingInvitation() {
                           <MapPin className="w-4 h-4 text-theme-500" />
                         </div>
                         <p className="text-lg md:text-xl text-stone-700 font-cinzel font-medium leading-relaxed tracking-wide">
-                          Awissawella,<br /> Sri Lanka.
+                          Colombo,<br /> Sri Lanka.
                         </p>
                       </div>
 
@@ -678,7 +678,7 @@ export default function WeddingInvitation() {
 
                     <div className="pt-8 w-full md:w-auto">
                       <button
-                        onClick={() => window.open('https://www.google.com/maps/search/Sethhawaka+Regency,+Awissawella', '_blank')}
+                        onClick={() => window.open('https://www.google.com/maps/search/Cinnamon+Lakeside+Colombo', '_blank')}
                         className="w-full md:w-auto flex items-center justify-center gap-4 bg-[#8C1430] text-white px-10 py-5 rounded-full font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-[#6B0C22] hover:shadow-xl hover:shadow-[#6B0C22]/20 transition-all duration-300 group"
                       >
                         <MapPin className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" />
@@ -699,7 +699,7 @@ export default function WeddingInvitation() {
                     {/* The Maps iframe */}
                     <div className="absolute inset-0 w-full h-full scale-[1.2] group-hover:scale-[1.15] transition-transform duration-[2s]">
                       <iframe
-                        src="https://maps.google.com/maps?q=Sethhawaka%20Regency,%20Awissawella,%20Sri%20Lanka&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.google.com/maps?q=Cinnamon%20Lakeside%20Colombo,%20Sri%20Lanka&t=&z=14&ie=UTF8&iwloc=&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -747,7 +747,7 @@ export default function WeddingInvitation() {
                         Thank You
                       </div>
                       <p className="text-[9px] md:text-[11px] uppercase tracking-[0.8em] text-theme-600 font-bold relative z-10 bg-[#FFFFF0] px-6 py-2 rounded-full border border-theme-100/50 shadow-sm">With Love</p>
-                      <h3 className="font-playball text-[3.2rem] sm:text-6xl md:text-8xl text-theme-900 relative z-10 drop-shadow-sm px-4 pt-4 leading-none">Nuwan & Samudra</h3>
+                      <h3 className="font-playball text-[3.2rem] sm:text-6xl md:text-8xl text-theme-900 relative z-10 drop-shadow-sm px-4 pt-4 leading-none">Achintha & Sanlaksha</h3>
 
                       <motion.img
                         initial={{ opacity: 0, y: 24, scale: 0.95 }}
@@ -771,15 +771,15 @@ export default function WeddingInvitation() {
                   </p>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 space-y-3 md:space-y-0">
                     <p className="text-[11px] md:text-[12px] tracking-[0.2em] text-stone-500 font-medium">
-                      Nuwan: <a href="tel:0765585691" className="text-theme-600 font-bold hover:text-theme-800 transition-colors ml-1">076 5585691</a>
+                      Achintha: <a href="tel:0771234567" className="text-theme-600 font-bold hover:text-theme-800 transition-colors ml-1">077 1234567</a>
                     </p>
                     <p className="text-[11px] md:text-[12px] tracking-[0.2em] text-stone-500 font-medium">
-                      Samudra: <a href="tel:0705107809" className="text-theme-600 font-bold hover:text-theme-800 transition-colors ml-1">070 5107809</a>
+                      Sanlaksha: <a href="tel:0719876543" className="text-theme-600 font-bold hover:text-theme-800 transition-colors ml-1">071 9876543</a>
                     </p>
                   </div>
                 </div>
                 <p className="text-[8px] md:text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold pt-4">
-                  © 2026 Nuwan & Samudra. All rights reserved.
+                  © 2026 Achintha & Sanlaksha. All rights reserved.
                 </p>
               </footer>
             </div>
