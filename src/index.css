@@ -8,19 +8,19 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-playball: "Playball", cursive;
 
-  --color-sage: #D4A338;
-  --color-paper: #FFFFF0;
+  --color-sage: #C084FC;
+  --color-paper: #FCFAFF;
 
-  --color-theme-50: #FCFBF4;
-  --color-theme-100: #F6F2DA;
-  --color-theme-200: #EFE4B7;
-  --color-theme-300: #E6D28D;
-  --color-theme-400: #DDBB61;
-  --color-theme-500: #D4A338;
-  --color-theme-600: #B8852B;
-  --color-theme-700: #966725;
-  --color-theme-800: #7A5122;
-  --color-theme-900: #664220;
+  --color-theme-50: #FAF5FF;
+  --color-theme-100: #F3E8FF;
+  --color-theme-200: #E9D5FF;
+  --color-theme-300: #D8B4FE;
+  --color-theme-400: #C084FC;
+  --color-theme-500: #A855F7;
+  --color-theme-600: #9333EA;
+  --color-theme-700: #7E22CE;
+  --color-theme-800: #6B21A8;
+  --color-theme-900: #581C87;
 }
 
 :root {
@@ -118,8 +118,8 @@ body {
 
 .website-shell {
   background:
-    radial-gradient(circle at 18% 14%, rgba(212, 163, 56, 0.12), transparent 38%),
-    radial-gradient(circle at 84% 72%, rgba(212, 163, 56, 0.10), transparent 42%),
+    radial-gradient(circle at 18% 14%, rgba(168, 85, 247, 0.12), transparent 38%),
+    radial-gradient(circle at 84% 72%, rgba(168, 85, 247, 0.10), transparent 42%),
     linear-gradient(180deg, #FFFFF0 0%, #FFFFF0 42%, #FFFFF0 100%);
 }
 
@@ -132,23 +132,23 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 25%, rgba(212, 163, 56, 0.12), transparent 35%),
-    radial-gradient(circle at 78% 75%, rgba(212, 163, 56, 0.10), transparent 38%);
+    radial-gradient(circle at 20% 25%, rgba(168, 85, 247, 0.12), transparent 35%),
+    radial-gradient(circle at 78% 75%, rgba(168, 85, 247, 0.10), transparent 38%);
 }
 
 .paper-grain {
   background-image:
     radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.85) 0.5px, transparent 0.8px),
-    radial-gradient(circle at 78% 42%, rgba(212, 163, 56, 0.15) 0.6px, transparent 0.9px),
-    radial-gradient(circle at 42% 76%, rgba(212, 163, 56, 0.1) 0.5px, transparent 0.8px);
+    radial-gradient(circle at 78% 42%, rgba(168, 85, 247, 0.15) 0.6px, transparent 0.9px),
+    radial-gradient(circle at 42% 76%, rgba(168, 85, 247, 0.1) 0.5px, transparent 0.8px);
   background-size: 9px 9px, 15px 15px, 18px 18px;
 }
 
 .paper-grain-strong {
   background-image:
     radial-gradient(circle at 22% 24%, rgba(255, 255, 255, 0.88) 0.55px, transparent 0.85px),
-    radial-gradient(circle at 70% 64%, rgba(212, 163, 56, 0.15) 0.65px, transparent 0.95px),
-    linear-gradient(180deg, rgba(255, 255, 240, 0.75), rgba(255, 255, 240, 0.8));
+    radial-gradient(circle at 70% 64%, rgba(168, 85, 247, 0.15) 0.65px, transparent 0.95px),
+    linear-gradient(180deg, rgba(252, 250, 255, 0.75), rgba(252, 250, 255, 0.8));
   background-size: 8px 8px, 14px 14px, 100% 100%;
 }
 
