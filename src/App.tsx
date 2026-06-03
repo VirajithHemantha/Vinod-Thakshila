@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, MapPin, Calendar, Clock } from "lucide-react";
+import { Sparkles, MapPin, Calendar, Clock, Volume2, VolumeX } from "lucide-react";
 
 /**
  * Premium Sri Lankan Wedding Invitation Theme
@@ -139,7 +139,7 @@ function FloatingPetals({ disabled = false }: { disabled?: boolean }) {
 }
 
 function CountdownTimer() {
-  const targetDate = new Date("July 30, 2027 10:00:00").getTime();
+  const targetDate = new Date("July 30, 2026 10:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
 
   React.useEffect(() => {
@@ -218,7 +218,7 @@ function WeddingEnvelope({ onOpen }: { onOpen: () => void }) {
         <h1 className="font-cinzel text-4xl md:text-5xl text-theme-800 mb-4 tracking-tight">
           Vinod & Thakshila
         </h1>
-        <p className="text-stone-500 text-sm tracking-[0.2em] font-light">JULY 30, 2027</p>
+        <p className="text-stone-500 text-sm tracking-[0.2em] font-light">JULY 30, 2026</p>
       </motion.div>
 
       {/* Gatefold Envelope */}
@@ -263,6 +263,50 @@ function WeddingEnvelope({ onOpen }: { onOpen: () => void }) {
 export default function WeddingInvitation() {
   const [isOpened, setIsOpened] = useState(false);
   const [isLowPerformanceMode, setIsLowPerformanceMode] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    if (isOpened) {
+      if (!audioRef.current) {
+        audioRef.current = new Audio("/bg_music.mp3");
+        audioRef.current.loop = true;
+      }
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch(err => {
+        console.error("Audio playback failed:", err);
+      });
+    } else {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+    };
+  }, [isOpened]);
+
+  const togglePlay = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio("/bg_music.mp3");
+      audioRef.current.loop = true;
+    }
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch(err => {
+        console.error("Audio playback failed:", err);
+      });
+    }
+  };
 
   useEffect(() => {
     const motionMedia = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -324,6 +368,24 @@ export default function WeddingInvitation() {
               <div className="flex flex-col items-center">
                 <div className="text-[8px] uppercase tracking-widest font-bold">Close</div>
               </div>
+            </motion.button>
+
+            {/* Background Music Toggle Button */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              onClick={togglePlay}
+              className="fixed bottom-6 right-6 z-50 bg-white/80 backdrop-blur-md p-3.5 rounded-full shadow-lg border border-theme-100 text-theme-800 hover:bg-theme-50 hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center"
+              title={isPlaying ? "Mute Background Music" : "Play Background Music"}
+            >
+              {isPlaying ? (
+                <div className="relative">
+                  <span className="absolute -inset-2 rounded-full bg-theme-300/30 animate-ping" />
+                  <Volume2 className="w-5 h-5 text-theme-600 relative z-10" />
+                </div>
+              ) : (
+                <VolumeX className="w-5 h-5 text-stone-400" />
+              )}
             </motion.button>
 
             {/* Hero Section */}
@@ -419,7 +481,7 @@ export default function WeddingInvitation() {
                       <div className="h-px w-full bg-gradient-to-l from-transparent via-theme-300 to-theme-400" />
                     </div>
                     <div className="font-cinzel space-y-2">
-                      <p className="text-lg md:text-base text-stone-700 tracking-[0.2em] md:tracking-[0.3em] font-bold">30 JULY 2027</p>
+                      <p className="text-lg md:text-base text-stone-700 tracking-[0.2em] md:tracking-[0.3em] font-bold">30 JULY 2026</p>
                       <p className="text-[11px] md:text-[9px] text-theme-600 tracking-[0.2em] uppercase font-bold">Ratnapura, Sri Lanka</p>
                     </div>
                   </motion.div>
@@ -558,8 +620,8 @@ export default function WeddingInvitation() {
                     <div className="flex flex-col items-center flex-1">
                       <Calendar className="w-6 h-6 md:w-8 md:h-8 text-theme-500 mb-4 opacity-80" />
                       <p className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-stone-400 font-bold mb-3">The Date</p>
-                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">FRIDAY, 30 JULY</p>
-                      <p className="font-cinzel text-lg md:text-xl text-theme-600 tracking-[0.3em] font-normal mt-2">2027</p>
+                      <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">THURSDAY, 30 JULY</p>
+                      <p className="font-cinzel text-lg md:text-xl text-theme-600 tracking-[0.3em] font-normal mt-2">2026</p>
                     </div>
 
                     <div className="hidden md:flex flex-col items-center gap-3">
@@ -767,7 +829,7 @@ export default function WeddingInvitation() {
               <footer className="py-12 border-t border-theme-200/30 text-center relative z-10 space-y-4">
 
                 <p className="text-[8px] md:text-[10px] uppercase tracking-[0.5em] text-stone-400 font-bold pt-4">
-                  © 2027 Vinod & Thakshila. All rights reserved.
+                  © 2026 Vinod & Thakshila. All rights reserved.
                 </p>
               </footer>
             </div>
