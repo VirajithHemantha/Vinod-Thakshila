@@ -77,7 +77,7 @@ function FloatingPetals({ disabled = false }: { disabled?: boolean }) {
       return;
     }
 
-    const colors = ["#F3E8FF", "#E9D5FF", "#D8B4FE", "#C084FC"];
+    const colors = ["#F3E8FF", "#E9D5FF", "#D8B4FE", "#C084FC", "#FCE7F3", "#FBCFE8", "#F472B6", "#EC4899"];
     const petalCount = isMobile ? 6 : 10;
     const newPetals = Array.from({ length: petalCount }).map((_, i) => ({
       id: i,
@@ -102,7 +102,7 @@ function FloatingPetals({ disabled = false }: { disabled?: boolean }) {
       {petals.map((petal) => (
         <motion.div
           key={petal.id}
-          className="absolute drop-shadow-[0_2px_6px_rgba(168,85,247,0.5)]"
+          className="absolute drop-shadow-[0_2px_6px_rgba(236,72,153,0.4)]"
           style={{ color: petal.color }}
           initial={{
             x: `${petal.x}vw`,
@@ -173,9 +173,9 @@ function CountdownTimer() {
           className="relative group"
         >
           {/* Ornamental Frame container */}
-          <div className="relative w-[4.5rem] h-[6.5rem] sm:w-20 sm:h-28 md:w-32 md:h-44 bg-white rounded-t-full shadow-[0_15px_35px_-10px_rgba(0,0,0,0.08)] border border-theme-100/60 flex flex-col items-center justify-center overflow-hidden transition-transform duration-700 group-hover:-translate-y-3">
+          <div className="relative w-[4.5rem] h-[6.5rem] sm:w-20 sm:h-28 md:w-32 md:h-44 bg-white rounded-t-full shadow-[0_15px_35px_-10px_rgba(0,0,0,0.08)] border border-pink-100/60 flex flex-col items-center justify-center overflow-hidden transition-transform duration-700 group-hover:-translate-y-3">
             <div className="absolute top-0 right-0 opacity-[0.03] paper-grain w-full h-full pointer-events-none" />
-            <div className="absolute inset-1.5 sm:inset-2 md:inset-3 border-[0.5px] border-theme-300/50 rounded-t-full pointer-events-none" />
+            <div className="absolute inset-1.5 sm:inset-2 md:inset-3 border-[0.5px] border-pink-300/50 rounded-t-full pointer-events-none" />
 
             {/* The Number */}
             <span className="text-2xl sm:text-3xl md:text-5xl font-playball text-theme-800 leading-none relative z-10 drop-shadow-sm mt-3 sm:mt-4 md:mt-6 transition-transform duration-500 group-hover:scale-110">
@@ -190,7 +190,7 @@ function CountdownTimer() {
             </div>
 
             {/* Bottom decoration */}
-            <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 w-[3px] h-[3px] sm:w-1 sm:h-1 md:w-1.5 md:h-1.5 rotate-45 bg-theme-300" />
+            <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 w-[3px] h-[3px] sm:w-1 sm:h-1 md:w-1.5 md:h-1.5 rotate-45 bg-pink-400" />
           </div>
         </motion.div>
       ))}
@@ -212,7 +212,7 @@ function WeddingEnvelope({ onOpen }: { onOpen: () => void }) {
     >
       {/* Title Section */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-10">
-        <span className="inline-block px-5 py-2 rounded-full bg-[#FAF5FF] border border-[#E9D5FF] text-[10px] uppercase tracking-[0.5em] text-[#7E22CE] font-bold mb-6">
+        <span className="inline-block px-5 py-2 rounded-full bg-pink-50 border border-pink-200 text-[10px] uppercase tracking-[0.5em] text-pink-600 font-bold mb-6">
           Save the Date
         </span>
         <h1 className="font-cinzel text-4xl md:text-5xl text-theme-800 mb-4 tracking-tight">
@@ -242,7 +242,7 @@ function WeddingEnvelope({ onOpen }: { onOpen: () => void }) {
         <motion.div
           whileHover={{ scale: 1.1, rotate: -6 }}
           whileTap={{ scale: 0.9 }}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-28 h-28 rounded-full bg-gradient-to-br from-[#D946EF] via-[#A855F7] to-[#7E22CE] shadow-[0_20px_45px_-10px_rgba(126,34,206,0.65)] border-[5px] border-[#581C87] flex items-center justify-center pointer-events-auto"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-28 h-28 rounded-full bg-gradient-to-br from-[#D946EF] via-[#A855F7] to-[#7E22CE] shadow-[0_20px_45px_-10px_rgba(236,72,153,0.6)] border-[5px] border-[#BE185D] flex items-center justify-center pointer-events-auto"
         >
           <div className="absolute inset-1.5 rounded-full border border-[#A855F7]/50" />
           <div className="text-center relative z-10">
@@ -252,7 +252,7 @@ function WeddingEnvelope({ onOpen }: { onOpen: () => void }) {
           </div>
         </motion.div>
 
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 text-[8px] uppercase tracking-[0.45em] text-[#6B21A8]/80 font-bold bg-white/80 backdrop-blur-md px-6 py-2.5 rounded-full border border-[#C084FC]/80 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 text-[8px] uppercase tracking-[0.45em] text-pink-600/90 font-bold bg-white/80 backdrop-blur-md px-6 py-2.5 rounded-full border border-pink-200/80 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           Tap To Open
         </div>
       </div>
@@ -418,7 +418,7 @@ export default function WeddingInvitation() {
                 className="relative z-10 w-full max-w-[420px] min-h-[500px] h-[85vh] md:h-[80vh] md:bg-[#ffffff] md:rounded-t-full md:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.08)] md:border md:border-theme-100 flex flex-col items-center overflow-hidden p-6 pt-12 md:p-10 md:pt-16"
               >
                 {/* Arch outline decoration */}
-                <div className="absolute inset-3 sm:inset-5 border-[0.5px] border-theme-400/40 rounded-t-full pointer-events-none hidden md:block" />
+                <div className="absolute inset-3 sm:inset-5 border-[0.5px] border-pink-300/45 rounded-t-full pointer-events-none hidden md:block" />
                 <div className="absolute inset-4 sm:inset-6 border border-theme-200/40 rounded-t-full pointer-events-none hidden md:block" />
 
                 <motion.img
@@ -455,7 +455,7 @@ export default function WeddingInvitation() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 1.2, duration: 0.5 }}
-                      className="font-playball text-3xl md:text-5xl text-theme-500 italic font-light my-2 md:my-4 tracking-widest"
+                      className="font-playball text-3xl md:text-5xl text-pink-500 italic font-light my-2 md:my-4 tracking-widest"
                     >
                       &
                     </motion.div>
@@ -476,9 +476,9 @@ export default function WeddingInvitation() {
                     className="mt-8 md:mt-auto pb-4 w-full flex flex-col items-center"
                   >
                     <div className="flex items-center justify-center gap-4 mb-6 opacity-70 w-full px-8 hidden md:flex">
-                      <div className="h-px w-full bg-gradient-to-r from-transparent via-theme-300 to-theme-400" />
-                      <div className="w-1.5 h-1.5 rotate-45 bg-theme-500 shrink-0" />
-                      <div className="h-px w-full bg-gradient-to-l from-transparent via-theme-300 to-theme-400" />
+                      <div className="h-px w-full bg-gradient-to-r from-transparent via-pink-300 to-theme-400" />
+                      <div className="w-1.5 h-1.5 rotate-45 bg-pink-500 shrink-0" />
+                      <div className="h-px w-full bg-gradient-to-l from-transparent via-pink-300 to-theme-400" />
                     </div>
                     <div className="font-cinzel space-y-2">
                       <p className="text-lg md:text-base text-stone-700 tracking-[0.2em] md:tracking-[0.3em] font-bold">30 JULY 2026</p>
@@ -499,7 +499,7 @@ export default function WeddingInvitation() {
                   <motion.div
                     animate={{ y: [-40, 60] }}
                     transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-                    className="w-full h-8 bg-theme-500"
+                    className="w-full h-8 bg-gradient-to-b from-pink-500 to-theme-500"
                   />
                 </div>
               </motion.div>
@@ -541,8 +541,8 @@ export default function WeddingInvitation() {
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   className="relative mb-10 md:mb-14"
                 >
-                  <div className="absolute -inset-3 md:-inset-4 rounded-[2rem] bg-theme-200/35 blur-xl" />
-                  <div className="relative bg-white/90 p-2.5 md:p-3 rounded-[2rem] border border-theme-200 shadow-[0_20px_50px_-20px_rgba(168,85,247,0.45)]">
+                  <div className="absolute -inset-3 md:-inset-4 rounded-[2rem] bg-pink-200/35 blur-xl" />
+                  <div className="relative bg-white/90 p-2.5 md:p-3 rounded-[2rem] border border-pink-200 shadow-[0_20px_50px_-20px_rgba(236,72,153,0.35)]">
                     <InviteImage
                       src={brideGroomImage}
                       alt="Bride and groom wedding illustration"
@@ -561,7 +561,7 @@ export default function WeddingInvitation() {
                     viewport={{ once: true }}
                     className="relative bg-white w-full max-w-[320px] p-6 md:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-theme-100/50 rounded-tl-[100px] rounded-br-[100px] md:rounded-tl-[130px] md:rounded-br-[130px] overflow-hidden group flex flex-col justify-center text-center items-center"
                   >
-                    <div className="absolute inset-2 border border-theme-200/50 rounded-tl-[90px] rounded-br-[90px] md:rounded-tl-[120px] md:rounded-br-[120px] pointer-events-none" />
+                    <div className="absolute inset-2 border border-pink-200/60 rounded-tl-[90px] rounded-br-[90px] md:rounded-tl-[120px] md:rounded-br-[120px] pointer-events-none" />
                     <div className="absolute inset-0 opacity-[0.02] paper-grain pointer-events-none" />
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
@@ -580,7 +580,7 @@ export default function WeddingInvitation() {
                       whileInView={{ scale: 1, rotate: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
-                      className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-theme-500 to-theme-700 rounded-full flex items-center justify-center shadow-xl shadow-theme-900/20 border-4 border-[#FCFAFF]"
+                      className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-pink-500 to-theme-600 rounded-full flex items-center justify-center shadow-xl shadow-pink-500/10 border-4 border-[#FCFAFF]"
                     >
                       <span className="text-3xl md:text-5xl font-playball text-white md:-mt-1 drop-shadow-md">&</span>
                     </motion.div>
@@ -595,7 +595,7 @@ export default function WeddingInvitation() {
                     transition={{ delay: 0.1 }}
                     className="relative bg-white w-full max-w-[320px] p-6 md:p-10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-theme-100/50 rounded-tr-[100px] rounded-bl-[100px] md:rounded-tr-[130px] md:rounded-bl-[130px] overflow-hidden group flex flex-col justify-center text-center items-center md:mt-24"
                   >
-                    <div className="absolute inset-2 border border-theme-200/50 rounded-tr-[90px] rounded-bl-[90px] md:rounded-tr-[120px] md:rounded-bl-[120px] pointer-events-none" />
+                    <div className="absolute inset-2 border border-pink-200/60 rounded-tr-[90px] rounded-bl-[90px] md:rounded-tr-[120px] md:rounded-bl-[120px] pointer-events-none" />
                     <div className="absolute inset-0 opacity-[0.02] paper-grain pointer-events-none" />
                     <div className="relative z-10 space-y-4 py-8 md:py-12">
                       <div className="space-y-2">
@@ -637,18 +637,18 @@ export default function WeddingInvitation() {
                     </div>
 
                     <div className="flex flex-col items-center flex-1">
-                      <Clock className="w-6 h-6 md:w-8 md:h-8 text-theme-500 mb-4 opacity-80" />
+                      <Clock className="w-6 h-6 md:w-8 md:h-8 text-pink-500 mb-4 opacity-80" />
                       <p className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-stone-400 font-bold mb-3">The Time</p>
                       <p className="font-cinzel text-xl md:text-3xl text-theme-900 tracking-widest font-bold whitespace-nowrap">10:00 AM</p>
-                      <p className="font-cinzel text-xs md:text-sm text-theme-600 tracking-[0.2em] mt-3 uppercase">To 04:30 PM</p>
+                      <p className="font-cinzel text-xs md:text-sm text-pink-600 tracking-[0.2em] mt-3 uppercase">To 04:30 PM</p>
                     </div>
                   </div>
 
                   <div className="pt-8 w-full px-4">
                     <div className="relative inline-flex items-center justify-center w-full max-w-md mx-auto group">
                       <div className="absolute inset-0 bg-theme-100 blur-lg opacity-40 group-hover:opacity-60 transition-opacity" />
-                      <p className="relative text-theme-800 bg-white shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] text-[9px] md:text-[11px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase px-6 lg:px-10 py-4 lg:py-5 rounded-full border border-theme-200 flex items-center justify-center gap-4 w-full md:w-auto">
-                        <span className="w-1.5 h-1.5 rotate-45 bg-theme-500 shrink-0" />
+                      <p className="relative text-theme-800 bg-white shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] text-[9px] md:text-[11px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase px-6 lg:px-10 py-4 lg:py-5 rounded-full border border-pink-200 flex items-center justify-center gap-4 w-full md:w-auto">
+                        <span className="w-1.5 h-1.5 rotate-45 bg-pink-500 shrink-0" />
                         <span className="whitespace-nowrap">Poruwa Ceremony at 10:15 AM</span>
                         <span className="w-1.5 h-1.5 rotate-45 bg-theme-500 shrink-0" />
                       </p>
@@ -683,11 +683,11 @@ export default function WeddingInvitation() {
                   </div>
 
                   <h2 className="font-cinzel text-3xl md:text-5xl text-theme-900 mb-8 relative z-10 tracking-widest font-bold drop-shadow-sm px-4 leading-[1.4]">
-                    Wait for the <span className="font-playball text-theme-700 italic lowercase tracking-normal text-4xl md:text-7xl ml-2">magic</span>
+                    Wait for the <span className="font-playball text-pink-500 italic lowercase tracking-normal text-4xl md:text-7xl ml-2">magic</span>
                   </h2>
 
-                  <p className="text-[10px] md:text-[11px] uppercase tracking-[0.5em] text-theme-600 font-bold bg-white/80 backdrop-blur-sm px-8 py-3 rounded-full border border-theme-200/50 inline-flex items-center gap-3 shadow-[0_4px_15px_-5px_rgba(0,0,0,0.05)] relative z-10">
-                    <span className="w-1 h-1 rounded-full bg-theme-400 animate-pulse" />
+                  <p className="text-[10px] md:text-[11px] uppercase tracking-[0.5em] text-pink-600 font-bold bg-white/80 backdrop-blur-sm px-8 py-3 rounded-full border border-pink-200/50 inline-flex items-center gap-3 shadow-[0_4px_15px_-5px_rgba(0,0,0,0.05)] relative z-10">
+                    <span className="w-1 h-1 rounded-full bg-pink-400 animate-pulse" />
                     Counting Down
                     <span className="w-1 h-1 rounded-full bg-theme-400 animate-pulse" />
                   </p>
@@ -713,8 +713,8 @@ export default function WeddingInvitation() {
                   >
                     <div className="flex flex-col items-start gap-4">
                       <div className="flex items-center gap-4">
-                        <div className="w-8 h-px bg-theme-400" />
-                        <span className="text-theme-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
+                        <div className="w-8 h-px bg-pink-400" />
+                        <span className="text-pink-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
                       </div>
                       <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[4rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px]">
                         Grand Guardian Ratnapura
@@ -725,8 +725,8 @@ export default function WeddingInvitation() {
                       <div className="absolute left-0 top-0 w-px h-full bg-gradient-to-b from-theme-300 to-transparent" />
 
                       <div className="pl-8 space-y-4">
-                        <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-sm border border-theme-100 absolute -left-5 top-0">
-                          <MapPin className="w-4 h-4 text-theme-500" />
+                        <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-sm border border-pink-100 absolute -left-5 top-0">
+                          <MapPin className="w-4 h-4 text-pink-500" />
                         </div>
                         <p className="text-lg md:text-xl text-stone-700 font-cinzel font-medium leading-relaxed tracking-wide">
                           Ratnapura,<br /> Sri Lanka.
@@ -741,7 +741,7 @@ export default function WeddingInvitation() {
                     <div className="pt-8 w-full md:w-auto">
                       <button
                         onClick={() => window.open('https://maps.app.goo.gl/1jamDdhCgKfxaLRz5', '_blank')}
-                        className="w-full md:w-auto flex items-center justify-center gap-4 bg-[#A855F7] text-white px-10 py-5 rounded-full font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-[#7E22CE] hover:shadow-xl hover:shadow-[#7E22CE]/20 transition-all duration-300 group"
+                        className="w-full md:w-auto flex items-center justify-center gap-4 bg-gradient-to-r from-pink-500 to-[#9333EA] text-white px-10 py-5 rounded-full font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs hover:from-pink-600 hover:to-[#7E22CE] hover:shadow-xl hover:shadow-pink-500/20 transition-all duration-300 group"
                       >
                         <MapPin className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" />
                         Live Location
@@ -756,7 +756,7 @@ export default function WeddingInvitation() {
                     viewport={{ once: true }}
                     className="relative w-full max-w-[450px] mx-auto aspect-[4/5] md:aspect-[3/4] rounded-t-full rounded-b-[2rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] border-[12px] border-white bg-theme-100 overflow-hidden group"
                   >
-                    <div className="absolute inset-0 border border-theme-200 rounded-t-full rounded-b-[1.5rem] pointer-events-none z-10" />
+                    <div className="absolute inset-0 border border-pink-200 rounded-t-full rounded-b-[1.5rem] pointer-events-none z-10" />
 
                     {/* The Maps iframe */}
                     <div className="absolute inset-0 w-full h-full scale-[1.2] group-hover:scale-[1.15] transition-transform duration-[2s]">
@@ -775,7 +775,7 @@ export default function WeddingInvitation() {
                     {/* Elegant fade overlay at bottom */}
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/80 to-transparent h-32 pointer-events-none z-10 flex items-end justify-center pb-6">
                       <p className="text-[8px] uppercase tracking-widest text-stone-500 font-bold bg-white/90 px-5 py-2 rounded-full shadow-sm backdrop-blur-md inline-flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-theme-400 animate-pulse" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
                         View on Map
                       </p>
                     </div>
@@ -800,15 +800,15 @@ export default function WeddingInvitation() {
                     viewport={{ once: true }}
                     className="flex flex-col items-center"
                   >
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-theme-100/50 mb-8 mt-4 shadow-sm border border-theme-200/50">
-                      <Sparkles className="w-8 h-8 text-theme-500" />
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-pink-100/50 mb-8 mt-4 shadow-sm border border-pink-200/50">
+                      <Sparkles className="w-8 h-8 text-pink-500" />
                     </div>
 
                     <div className="mt-12 md:mt-16 space-y-6 flex flex-col items-center relative w-full">
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-playball text-[22vw] md:text-[220px] text-theme-100/40 whitespace-nowrap pointer-events-none z-0 select-none">
                         Thank You
                       </div>
-                      <p className="text-[9px] md:text-[11px] uppercase tracking-[0.8em] text-theme-600 font-bold relative z-10 bg-[#FCFAFF] px-6 py-2 rounded-full border border-theme-100/50 shadow-sm">With Love</p>
+                      <p className="text-[9px] md:text-[11px] uppercase tracking-[0.8em] text-pink-600 font-bold relative z-10 bg-[#FCFAFF] px-6 py-2 rounded-full border border-pink-200/50 shadow-sm">With Love</p>
                       <h3 className="font-playball text-[3.2rem] sm:text-6xl md:text-8xl text-theme-900 relative z-10 drop-shadow-sm px-4 pt-4 leading-none">Vinod & Thakshila</h3>
 
                       <motion.img
@@ -853,7 +853,7 @@ export default function WeddingInvitation() {
           background: #FCFAFF;
         }
         ::-webkit-scrollbar-thumb {
-          background: #C084FC;
+          background: #EC4899;
           border-radius: 10px;
         }
       `}} />
