@@ -711,14 +711,17 @@ export default function WeddingInvitation() {
                     viewport={{ once: true }}
                     className="space-y-8 flex flex-col items-start"
                   >
-                    <div className="flex flex-col items-start gap-4">
-                      <div className="flex items-center gap-4">
+                    <div className="flex flex-col items-start gap-2">
+                      <div className="flex items-center gap-4 mb-1">
                         <div className="w-8 h-px bg-pink-400" />
                         <span className="text-pink-600 font-bold uppercase tracking-[0.4em] text-[9px] md:text-[11px]">The Venue</span>
                       </div>
                       <h2 className="font-playball text-[3.5rem] sm:text-[4rem] md:text-[4rem] text-theme-900 leading-[1] drop-shadow-sm ml-[-4px]">
-                        Grand Guardian Ratnapura
+                        Hotel Grand Guardian
                       </h2>
+                      <p className="text-xs md:text-sm text-pink-600 font-bold uppercase tracking-[0.25em]">
+                        (Ballroom)
+                      </p>
                     </div>
 
                     <div className="space-y-6 pt-4 relative">
